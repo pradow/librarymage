@@ -1,14 +1,16 @@
 import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import Router from "next/router";
 
 function Search() {
-  const router = useRouter();
   const [inputValue, setInputValue] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("submit");
+    Router.push({
+      pathname: "/search",
+      query: { q: inputValue },
+    });
   };
 
   const handleChange = (e) => {
