@@ -67,7 +67,9 @@ function search() {
         {fetchedData.map((card) => {
           return (
             <div key={card.id} className="grid-item">
-              <Link href="">
+              <Link
+                href={{ pathname: "card", query: { id: card.multiverseid } }}
+              >
                 <a className="card-link">
                   <img src={card.imageUrl} alt="" className="card-image" />
                 </a>
