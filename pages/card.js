@@ -46,7 +46,7 @@ function card() {
             <div className="card-name">{fetchedData.card.name}</div>
           </div>
         <div className="col">
-          <img src={fetchedData.card.imageUrl} alt="" />
+          <img src={fetchedData.card.imageUrl} alt="{fetchedData.card.name}" />
         </div>
         <div className="col">
           <div>
